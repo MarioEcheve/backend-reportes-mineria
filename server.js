@@ -3,7 +3,9 @@ const express = require("express");
 const pool = require('./data/config');
 
 const app = express();
+var cors = require('cors');
 var routes = require('./routes'); 
+app.use(cors());
 app.use('/', routes);
 app.use('/cargo', routes);
 /*
